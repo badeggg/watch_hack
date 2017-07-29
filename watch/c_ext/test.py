@@ -1,0 +1,3 @@
+import watchmacdir
+
+watchmacdir.watch()
