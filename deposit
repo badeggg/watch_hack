@@ -1,0 +1,16 @@
+# This file save knowledges or inspiration learned in the development of this project. 
+
+Mac File System Events API:
+https://developer.apple.com/library/content/documentation/Darwin/Conceptual/FSEvents_ProgGuide/UsingtheFSEventsFramework/UsingtheFSEventsFramework.html#//apple_ref/doc/uid/TP40005289-CH4-SW5
+
+Concurrency Programming:
+https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Multithreading/AboutThreads/AboutThreads.html#//apple_ref/doc/uid/10000057i-CH6-SW3
+
+Python C Extension:
+https://docs.python.org/3.6/extending/extending.html
+
+Problem Came Across:
+-- python module import error (ImportError: ... Symbol not found ...):
+       + https://stackoverflow.com/questions/35006614/what-does-symbol-not-found-expected-in-flat-namespace-actually-mean
+       + https://stackoverflow.com/questions/19573488/symbol-not-found-expected-in-flat-namespace
+
