@@ -1,6 +1,8 @@
 #include <Python.h>
 #include <CoreServices/CoreServices.h>
 
+PyObject* callback = NULL;
+
 void mycallback(
     ConstFSEventStreamRef streamRef,
     void *clientCallBackInfo,
@@ -9,14 +11,13 @@ void mycallback(
     const FSEventStreamEventFlags eventFlags[],
     const FSEventStreamEventId eventIds[])
 {
-    printf("旭旭");
+    PyObject_CallObject(callback, NULL);
 }
 
 static PyObject*
 watchmacdir_watch(PyObject* self, PyObject* args)
 {
   const char* path;
-  PyObject* callback = NULL;
   float latency = 0.05;
   FSEventStreamRef stream;
   if(!PyArg_ParseTuple(args, "sO|f", &path, &callback, &latency))
@@ -40,9 +41,10 @@ watchmacdir_watch(PyObject* self, PyObject* args)
 
   //Schedule stream to run loop
   FSEventStreamScheduleWithRunLoop(stream, CFRunLoopGetCurrent(), kCFRunLoopDefaultMode);
-
-  PyObject_CallObject(callback, NULL);
+  FSEventStreamStart(stream);
   printf("Watching %s with latency %f...\n", path, latency);
+  CFRunLoopRun();
+
   return PyLong_FromLong(0);
 }
 
