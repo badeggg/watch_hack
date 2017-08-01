@@ -13,4 +13,10 @@ Problem Came Across:
 -- python module import error (ImportError: ... Symbol not found ...):
        + https://stackoverflow.com/questions/35006614/what-does-symbol-not-found-expected-in-flat-namespace-actually-mean
        + https://stackoverflow.com/questions/19573488/symbol-not-found-expected-in-flat-namespace
+-- event in python/c
+       still confused
+-- how to check chrome has started when start it from python code
+       + art solution: chrome tell me
+       + poll request chrome server, such as inspectable page json
+       + wait enough time
 
