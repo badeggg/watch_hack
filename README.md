@@ -17,3 +17,6 @@ Doc(s) about apple's file system api:
 Doc(s) about chrome devtools protocol: 
 - https://chromedevtools.github.io/devtools-protocol/
 
+Usage: (Preface: I am fresh to python and not familiar with module dependency system of python, for now, so maybe this usage instruction and even this project structure is not the best. Feel free to give me advices)
+- 
+
