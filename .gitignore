@@ -1,5 +1,5 @@
 #c extension build file
-**/c_ext/build/
+**/build/
 
 #hack
 hack
@@ -8,3 +8,6 @@ MANIFEST
 
 #python cached compiled file
 __pycache__/
+
+#distribution file
+*egg-info/
