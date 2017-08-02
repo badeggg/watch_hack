@@ -24,6 +24,7 @@ Usage:
 
 Doc(s) about apple's file system api:
 - https://developer.apple.com/library/content/documentation/Darwin/Conceptual/FSEvents_ProgGuide/Introduction/Introduction.html
-<br>
+
 Doc(s) about chrome devtools protocol: 
 - https://chromedevtools.github.io/devtools-protocol/
+ 
