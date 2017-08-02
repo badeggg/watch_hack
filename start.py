@@ -15,6 +15,9 @@ port = 9222 if not m else m.groups()[0]
 
 m=re.search('page=([\w\.]+)', argv_str)
 page = 'test.html' if not m else m.groups()[0]
+m=re.search('[\w]+\.html', argv_str)
+page = page if not m else m.group()
+
 
 page_url = 'file://{}/{}'.format(os.getcwd(), page)
 cmd_reload = """
@@ -34,9 +37,9 @@ cmd_reload = """
   }
 """
 
-chrome = Thread(target=launch.run, args=(port, page))
+chrome = Thread(target=launch.run, args=(port, page_url))
 chrome.start()
-#poll request to check chrome has started
+#poll request to check whether chrome has started
 poll_url = 'http://localhost:{}/json'.format(port)
 while True:
   try:
