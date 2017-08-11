@@ -1,5 +1,5 @@
 A hack tool. <br>
-Open specific html file in chrome canary, watch current directory, when there is any chang in it, update corresponding canary tab. 
+Open specific html file in chrome canary, watch current directory, when any change happen, update corresponding canary tab. 
 
 Basic main function:
 - watch directory (use apple's file system events api)
