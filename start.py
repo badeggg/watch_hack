@@ -13,9 +13,7 @@ argv_str = ' '.join(sys.argv)
 m=re.search('port=(\d+)', argv_str)
 port = 9222 if not m else m.groups()[0]
 
-m=re.search('page=([\w\.]+)', argv_str)
-page = 'test.html' if not m else m.groups()[0]
-m=re.search('[\w]+\.html', argv_str)
+m=re.search('[\w]+\.(html|svg)', argv_str)
 page = page if not m else m.group()
 
 
