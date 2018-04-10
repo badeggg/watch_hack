@@ -11,3 +11,6 @@ __pycache__/
 
 #distribution file
 *egg-info/
+
+#idea
+.idea

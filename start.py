@@ -37,7 +37,7 @@ cmd_reload = """
 
 chrome = Thread(target=launch.run, args=(port, page_url))
 chrome.start()
-#poll request to check whether chrome has started
+# poll request to check whether chrome has started
 poll_url = 'http://localhost:{}/json'.format(port)
 while True:
   try:

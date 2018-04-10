@@ -1,4 +1,5 @@
 from urllib import request
+from urllib.parse import quote
 import json
 import websocket
 
@@ -13,7 +14,7 @@ class Link:
   def get_target_page_websocket_url(self):
     pages = json.loads( self.get_inspectable_pages() )
     for page in pages:
-      if page['url'] == self.target_page_url:
+      if page['url'] == quote(self.target_page_url, safe=":/"):
         ret = page['webSocketDebuggerUrl']
         break
     return ret
